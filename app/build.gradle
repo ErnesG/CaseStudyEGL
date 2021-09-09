@@ -1,0 +1,94 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'androidx.navigation.safeargs.kotlin'
+}
+
+android {
+    compileSdkVersion 30
+
+    defaultConfig {
+        applicationId "target.gonzalez.lopez.ernesto.casestudy"
+        minSdkVersion 27
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildFeatures {
+        viewBinding = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    def coroutines_version = "1.5.0-native-mt"
+    def coroutines_core = "1.5"
+    def dagger_version = "2.35.1"
+    def life_cycle_version = "2.2.0"
+    def android_arch = "2.1.0"
+    def moshi_version = "1.12.0"
+    def moshi_converter = "2.8.1"
+    def okhttp_interceptor_version = "3.12.0"
+    def retrofit_version = "2.8.1"
+    def mockito_version = "3.3.3"
+    def glide_version = "4.12.0"
+    def arch_lifecycle = "2.3.1"
+    def navigation = "2.3.5"
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.5.10"
+    implementation 'androidx.core:core-ktx:1.6.0'
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.0'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    //LifeCycle
+    implementation "androidx.lifecycle:lifecycle-common:$life_cycle_version"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$arch_lifecycle"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$arch_lifecycle"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$arch_lifecycle"
+    implementation "androidx.lifecycle:lifecycle-common-java8:$arch_lifecycle"
+    implementation "androidx.navigation:navigation-fragment-ktx:$navigation"
+    implementation "androidx.navigation:navigation-ui-ktx:$navigation"
+
+
+    //coroutines setup
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_core"
+    // network
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttp_interceptor_version"
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.moshi:moshi:$moshi_version"
+    kapt "com.squareup.moshi:moshi-kotlin-codegen:$moshi_version"
+    implementation "com.squareup.retrofit2:converter-moshi:$moshi_converter"
+    // di-dagger
+    implementation "com.google.dagger:dagger:$dagger_version"
+    kapt "com.google.dagger:dagger-compiler:$dagger_version"
+    implementation "com.google.dagger:dagger-android:$dagger_version"
+    implementation "com.google.dagger:dagger-android-support:$dagger_version"
+    kapt "com.google.dagger:dagger-android-processor:$dagger_version"
+    implementation "org.mockito:mockito-core:$mockito_version"
+    testImplementation "androidx.arch.core:core-testing:$android_arch"
+    // glide
+    implementation "com.github.bumptech.glide:glide:$glide_version"
+    kapt "com.github.bumptech.glide:compiler:$glide_version"
+}

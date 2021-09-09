@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">CaseStudyEGL</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="credit_card_payment_title">Credit Card Payment</string>
+    <string name="credit_card_payment_subtitle">Note: you do NOT need to enter real data</string>
+    <string name="submit">Submit</string>
+    <string name="cancel">Cancel</string>
+    <string name="credit_card_number_hint">Credit card number</string>
+    <!-- Deal List -->
+    <string name="deal_list_title">List of deals</string>
+    <string name="ship_or_action_lbl">Ship or</string>
+
+    <!-- Deal Item -->
+    <string name="deal_item_title">Detail of deal</string>
+    <string name="add_to_list_lbl">Add to list</string>
+    <string name="add_to_cart">Add to cart</string>
+    <string name="regular_price_format_placeholder">Reg: %s</string>
+    <string name="deal_list_item_tools_placeholder">1</string>
+    <string name="added_payment_method">
+        Payment method added successfully
+    </string>
+</resources>

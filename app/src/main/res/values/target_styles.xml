@@ -1,0 +1,46 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryDark">@color/primary_color_dark</item>
+        <item name="colorAccent">@color/accent</item>
+    </style>
+
+    <style name="ToolBar.Theme" parent="ThemeOverlay.MaterialComponents.Toolbar.Surface">
+        <item name="colorControlNormal">@color/white_color</item>
+        <item name="android:textColorPrimary">@android:color/white</item>
+    </style>
+
+    <!-- Text view themes. -->
+    <style name="MainPriceStyle" parent="android:Widget.TextView">
+        <!-- Customize your theme here. -->
+        <item name="android:textColor">@color/color_primary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/font_headline_32sp</item>
+    </style>
+
+    <style name="SecondaryPriceStyle" parent="android:Widget.TextView">
+        <!-- Customize your theme here. -->
+        <item name="android:textColor">@color/general_text_color</item>
+        <item name="android:textSize">@dimen/font_headline_24sp</item>
+    </style>
+
+    <style name="PricePrimaryStyle" parent="android:Widget.TextView">
+        <!-- Customize your theme here. -->
+        <item name="android:textColor">@color/text_color_secondary</item>
+        <item name="android:textSize">@dimen/font_headline_24sp</item>
+    </style>
+
+    <style name="HeaderTextViewStyle" parent="android:Widget.TextView">
+        <!-- Customize your theme here. -->
+        <item name="android:textColor">@color/text_color_secondary</item>
+        <item name="android:textSize">@dimen/font_headline_24sp</item>
+    </style>
+    <style name="ProgressBarTarget" parent="Widget.AppCompat.ProgressBar">
+        <item name="android:progressBackgroundTint">@color/gray_color</item>
+        <item name="android:progressTint">@color/red_color</item>
+    </style>
+
+</resources>

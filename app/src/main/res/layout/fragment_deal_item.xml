@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/prod_details_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.views.DealItemFragment">
+
+    <ImageView
+        android:id="@+id/product_image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/large_image_view_height"
+        android:layout_marginStart="@dimen/standard_spacing"
+        android:layout_marginTop="@dimen/standard_spacing"
+        android:layout_marginEnd="@dimen/standard_spacing"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/sale_price_lbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/med_spacing"
+        android:layout_marginTop="@dimen/med_spacing"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/product_image_view"
+        android:visibility="gone"
+        />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/regular_price_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/SecondaryPriceStyle"
+        android:layout_marginTop="@dimen/xm_spacing"
+        android:layout_marginEnd="@dimen/standard_spacing"
+        android:text="@string/regular_price_format_placeholder"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/regular_price"
+        app:layout_constraintTop_toBottomOf="@+id/product_image_view"
+        />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/regular_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/SecondaryPriceStyle"
+        android:layout_marginTop="@dimen/xm_spacing"
+        android:layout_marginEnd="@dimen/med_spacing"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/product_image_view"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/product_title"
+        style="@style/HeaderTextViewStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/med_spacing"
+        android:layout_marginTop="@dimen/standard_spacing"
+        android:layout_marginEnd="@dimen/med_spacing"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sale_price_lbl"
+        android:visibility="gone"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/product_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/med_spacing"
+        android:layout_marginTop="@dimen/standard_spacing"
+        android:layout_marginEnd="@dimen/med_spacing"
+        android:layout_marginBottom="@dimen/standard_spacing"
+        app:layout_constraintBottom_toTopOf="@+id/controls_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/product_title"
+        app:layout_constraintVertical_bias="0.0"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/controls_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/add_to_list_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:textAllCaps="false"
+            android:background="@drawable/button_standard"
+            android:text="@string/add_to_list_lbl" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/add_to_cart_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:textAllCaps="false"
+            android:background="@drawable/red_button"
+            android:textColor="@color/white_color"
+            android:text="@string/add_to_cart" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/loading_detail_progress_bar"
+        style="@style/ProgressBarTarget"
+        android:visibility="visible"
+        android:layout_width="@dimen/progress_bar_dimen"
+        android:layout_height="@dimen/progress_bar_dimen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
