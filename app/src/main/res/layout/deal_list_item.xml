@@ -7,16 +7,16 @@
     android:layout_height="wrap_content"
     >
     <ImageView
-        android:id="@+id/deal_list_item_image_view"
+        android:id="@+id/deal_image_view"
         android:layout_width="@dimen/product_image_width"
         android:layout_height="@dimen/product_image_height"
         android:src="@drawable/ic_launcher_foreground"
-        app:layout_constraintBottom_toTopOf="@+id/divider_separator"
+        app:layout_constraintBottom_toTopOf="@+id/separator"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/deal_list_item_title"
+        android:id="@+id/prod_title"
         style="@style/HeaderTextViewStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -25,7 +25,7 @@
         android:layout_marginBottom="4dp"
         app:layout_constraintBottom_toTopOf="@+id/divider"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/deal_list_item_image_view"
+        app:layout_constraintStart_toEndOf="@+id/deal_image_view"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
@@ -36,18 +36,18 @@
         android:layout_marginStart="24dp"
         android:background="@color/dividers_color"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/deal_list_item_image_view"
-        app:layout_constraintTop_toTopOf="@+id/guideline4" />
+        app:layout_constraintStart_toEndOf="@+id/deal_image_view"
+        app:layout_constraintTop_toTopOf="@+id/guide" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline4"
+        android:id="@+id/guide"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.5" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/deal_list_item_price"
+        android:id="@+id/price"
         style="@style/PricePrimaryStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -56,7 +56,7 @@
         android:layout_marginBottom="16dp"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/deal_list_item_image_view"
+        app:layout_constraintStart_toEndOf="@+id/deal_image_view"
         app:layout_constraintTop_toBottomOf="@+id/divider"
         app:layout_constraintVertical_bias="0.0" />
 
@@ -71,20 +71,20 @@
         android:textAlignment="center"
         android:textSize="@dimen/font_medium_text"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/frame_number"
-        app:layout_constraintTop_toTopOf="@+id/guideline4"
+        app:layout_constraintEnd_toStartOf="@+id/number"
+        app:layout_constraintTop_toTopOf="@+id/guide"
         app:layout_constraintVertical_bias="0.42000002" />
 
     <FrameLayout
-        android:id="@+id/frame_number"
+        android:id="@+id/number"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="@dimen/large_spacing"
         android:layout_marginBottom="@dimen/med_spacing"
-        app:layout_constraintBottom_toTopOf="@+id/divider_separator"
+        app:layout_constraintBottom_toTopOf="@+id/separator"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline4"
+        app:layout_constraintTop_toTopOf="@+id/guide"
         app:layout_constraintVertical_bias="0.39">
 
         <androidx.appcompat.widget.AppCompatImageView
@@ -94,7 +94,7 @@
             app:srcCompat="@drawable/circle_container" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/deal_list_item_aisle"
+            android:id="@+id/aisle"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
@@ -105,7 +105,7 @@
     </FrameLayout>
 
     <View
-        android:id="@+id/divider_separator"
+        android:id="@+id/separator"
         android:layout_width="0dp"
         android:layout_height="@dimen/xs_spacing_divider"
         android:background="@color/container_color_border"
